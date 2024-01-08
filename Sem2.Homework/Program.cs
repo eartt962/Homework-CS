@@ -15,25 +15,48 @@
 // Задача 2: Напишите программу, которая принимает на вход координаты точки (X и Y), 
 // причём X ≠ 0 и Y ≠ 0 и выдаёт номер координатной четверти плоскости, в которой находится эта точка.
 
-Console.Write("Введите координату Х:" );
-int X = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите координату Х:" );
+// int X = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Введите координату Y:" );
-int Y = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите координату Y:" );
+// int Y = Convert.ToInt32(Console.ReadLine());
 
-if (X > 0 && Y > 0)
+// if (X > 0 && Y > 0)
+// {
+//     Console.WriteLine("Точка находится в I четверти");
+// }
+// if (X < 0 && Y > 0)
+// {
+//     Console.WriteLine("Точка находится в II четверти");
+// }
+// if (X < 0 && Y < 0)
+// {
+//     Console.WriteLine("Точка находится в III четверти");
+// }
+// if (X > 0 && Y < 0)
+// {
+//     Console.WriteLine("Точка находится в IV четверти");
+// }
+
+// Задача 3: Напишите программу, которая принимает на вход целое число из отрезка [10, 99] и показывает наибольшую цифру числа
+
+Console.Write("Введите число:" );
+int number = Convert.ToInt32(Console.ReadLine());
+
+if (number >= 10 && number <= 99)
 {
-    Console.WriteLine("Точка находится в I четверти");
+    int firstDigit = number / 10; 
+    int secondDigit = number % 10;
+    if (firstDigit > secondDigit)
+    {
+        Console.WriteLine(firstDigit);
+    }
+    else
+    {
+        Console.WriteLine(secondDigit);
+    }
 }
-if (X < 0 && Y > 0)
-{
-    Console.WriteLine("Точка находится в II четверти");
-}
-if (X < 0 && Y < 0)
-{
-    Console.WriteLine("Точка находится в III четверти");
-}
-if (X > 0 && Y < 0)
-{
-    Console.WriteLine("Точка находится в IV четверти");
+else
+{       
+    Console.WriteLine("Число не входит в диапазон от 10 до 99"); 
 }
